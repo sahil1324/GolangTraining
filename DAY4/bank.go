@@ -26,7 +26,7 @@ func (ca *currentAccount) checkBalance() float64 {
   return ca.balance
 }
 func (sa *savingAccount) deposit(amount float64) {
-	sa.balance+=(amount+(sa.interestRate*amount)/100)
+	sa.balance+=(amount+(sa.interestRate*amount)*0.01)
 }
 func (sa *savingAccount) withdraw(amount float64) {
   sa.balance-=amount
